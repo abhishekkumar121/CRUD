@@ -1,0 +1,117 @@
+.client-details {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.client-details:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.client-details h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.client-details p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.edit-button {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #6b73ff, #4858e8);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse 2s infinite;
+    
+}
+
+.edit-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+@media (max-width: 768px) {
+    .client-details {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .client-details h2 {
+        font-size: 22px;
+    }
+
+    .client-details p {
+        font-size: 14px;
+    }
+
+    .edit-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

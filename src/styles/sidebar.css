@@ -1,0 +1,140 @@
+.sidebar {
+    width: 270px;
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    color: white;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: sticky;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+
+.sidebar:hover {
+    transform: rotateY(5deg);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-style: preserve-3d;
+}
+
+.avatar:hover {
+    transform: rotateZ(15deg) rotateY(15deg);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.9);
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1.2s ease-in-out;
+}
+
+.sidebar .MuiList-root {
+    width: 100%;
+}
+
+.sidebar .MuiListItem-root {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #333, #444);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+}
+
+.sidebar .MuiListItem-root:hover {
+    transform: translateX(5px) rotateY(-5deg);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .MuiListItem-root:active {
+    transform: translateX(2px) rotateY(-2deg);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.list-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .user-name {
+        font-size: 14px;
+    }
+
+    .list-item {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
